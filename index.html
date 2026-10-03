@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>圖片檢視</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0e0e10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100vh;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 這裡的 id="targetImage" 用來讓 JavaScript 找到圖片 -->
+  <img id="targetImage" alt="展示圖片">
+
+  <script>
+    // 設定你的圖片檔名（請確保檔名跟 GitHub 裡上傳的一致）
+    const imageName = "20261003.jpg";
+    
+    // 自動在檔名後面加上當下時間的毫秒數作為隨機參數
+    const timestamp = new Date().getTime();
+    document.getElementById("targetImage").src = imageName + "?v=" + timestamp;
+  </script>
+
+</body>
+</html>
