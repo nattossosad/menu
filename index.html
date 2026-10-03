@@ -31,5 +31,10 @@
   <!-- 將你的圖片網址貼在 src="" 裡面 -->
   <img src="20261003.jpg" alt="展示圖片">
 
+// 自動在檔名後面加上當下時間的毫秒數作為隨機參數
+    const timestamp = new Date().getTime();
+    document.getElementById("targetImage").src = imageName + "?v=" + timestamp;
+  </script>
+  
 </body>
 </html>
